@@ -4,3 +4,14 @@ configs:
     '"kustomize.buildOptions"': --enable-helm
   secret:
     argocdServerAdminPassword: $2a$10$pKM9yRpR2G5X8c3.M.lgs.v5xBBzEyiJnH5vrWYGkO3JNr5HTW8yq
+global:
+  domain: argocd.7f000001.nip.io
+server:
+  ingress:
+    annotations:
+      '"nginx.ingress.kubernetes.io/force-ssl-redirect"': true
+      '"nginx.ingress.kubernetes.io/ssl-passthrough"': true
+    enabled: true
+    hostname: argocd.7f000001.nip.io
+    ingressClassName: nginx
+    tls: true

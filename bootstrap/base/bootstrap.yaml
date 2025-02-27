@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/christianh814/example-control-plane-repo
+    repoURL: https://github.com/bbigras/example-control-plane-repo
     targetRevision: main
     path: configs/argocd/apps/
   destination:
